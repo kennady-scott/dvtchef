@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>Dad Dinner</title>
+<title>dvtChef</title>
 <link rel="icon" type="image/png" href="assets/app-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -412,8 +412,8 @@
     <!-- ============ TONIGHT ============ -->
     <section class="screen active" id="tonight">
       <div class="brandhead">
-        <img class="garlic-art" src="assets/garlic.png" alt="Dad Dinner garlic mark">
-        <div class="wm">DAD DINNER</div>
+        <img class="garlic-art" src="assets/garlic.png" alt="dvtChef garlic mark">
+        <div class="wm">dvtChef</div>
         <div class="tl">COOK WITH CONFIDENCE</div>
       </div>
 
@@ -509,7 +509,7 @@
         <img class="rosemary" src="assets/rosemary.png" alt="">
         <div class="k">Plan the week</div>
         <h1>Your week</h1>
-        <p>Tap any night to set the occasion — Dad Dinner tailors the whole meal to match.</p>
+        <p>Tap any night to set the occasion — dvtChef tailors the whole meal to match.</p>
       </div>
 
       <div class="ai-bar" style="margin:14px 18px 2px" onclick="toast('“Which nights are busy? How many are eating? Anything to use up?”')">
@@ -803,7 +803,7 @@ function renderSheet(){
   document.getElementById('sheet').innerHTML = `
     <div class="grab"></div>
     <h2>${dayFull}</h2>
-    <p class="sub">What’s this night? Dad Dinner builds the whole meal around it.</p>
+    <p class="sub">What’s this night? dvtChef builds the whole meal around it.</p>
     <div class="occ-grid">
       ${keys.map(k=>`<div class="occ-opt ${k===draftOcc?'sel':''}" onclick="pickOcc('${k}')">
         <span class="em">${OCC[k].em}</span><span class="lb">${OCC[k].label}</span></div>`).join('')}
