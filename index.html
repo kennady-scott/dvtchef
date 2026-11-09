@@ -69,6 +69,50 @@
   .band .q b{font-style:normal;font-weight:800;}
   .band .who{margin-top:18px;font-family:'Montserrat';font-weight:700;font-size:10px;letter-spacing:.26em;color:var(--stone);text-transform:uppercase;}
 
+  /* statement */
+  .statement{background:var(--paper);border-top:1px solid var(--stone);border-bottom:1px solid var(--stone);padding:74px 24px;text-align:center;}
+  .statement .st-big{font-family:'Playfair Display';font-weight:700;font-size:clamp(26px,4.2vw,40px);line-height:1.25;color:var(--charcoal);max-width:760px;margin:0 auto 24px;}
+  .statement .st-big em{font-style:italic;color:var(--olive);}
+  .statement .st-scope{max-width:660px;margin:0 auto;font-size:16px;color:#55523f;line-height:1.7;}
+  .statement .st-scope b{color:var(--olive-deep);}
+  /* approach */
+  .approach .ap-in{max-width:780px;margin:0 auto;padding:0 24px;}
+  .approach p{font-size:16px;color:#55523f;line-height:1.75;margin-bottom:20px;}
+  .approach p b{color:var(--olive-deep);}
+  .approach .ap-note{font-family:'Caveat',cursive;font-size:22px;color:var(--olive-deep);text-align:center;margin-top:10px;}
+  /* menu tabs */
+  .mtabs{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-bottom:30px;padding:0 24px;}
+  .mtab{font-family:'Montserrat';font-weight:700;font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+    background:transparent;border:1.5px solid var(--stone-deep, var(--stone));color:#6a6654;border-radius:999px;padding:12px 22px;cursor:pointer;transition:.18s;}
+  .mtab:hover{border-color:var(--olive);color:var(--olive-deep);}
+  .mtab.on{background:var(--olive);border-color:var(--olive);color:var(--cream);}
+  .mpanel{display:none;}
+  .mpanel.on{display:block;animation:mfade .4s ease;}
+  @keyframes mfade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+  .menu-wide{max-width:900px;margin:0 auto;background:var(--paper);border:1px solid var(--stone);border-radius:6px;padding:40px 38px 34px;position:relative;box-shadow:0 14px 36px rgba(74,86,56,.1);}
+  .menu-wide::before{content:'';position:absolute;inset:9px;border:1px solid var(--cream-deep);border-radius:3px;pointer-events:none;}
+  .menu-wide .mw-head{text-align:center;margin-bottom:26px;}
+  .menu-wide .mw-head .mk{font-family:'Montserrat';font-weight:700;font-size:9px;letter-spacing:.24em;color:var(--olive-soft);text-transform:uppercase;}
+  .menu-wide .mw-head h3{font-family:'Playfair Display';font-weight:800;font-size:27px;color:var(--charcoal);margin:7px 0 4px;}
+  .menu-wide .mw-head .for{font-family:'Playfair Display';font-style:italic;font-size:15px;color:var(--olive-soft);}
+  .mcols{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px 34px;}
+  .mcol .mcat{font-family:'Montserrat';font-weight:700;font-size:9.5px;letter-spacing:.2em;color:var(--olive-soft);text-transform:uppercase;text-align:center;margin:16px 0 6px;display:flex;align-items:center;gap:10px;justify-content:center;}
+  .mcol .mcat::before,.mcol .mcat::after{content:'';width:22px;height:1px;background:var(--stone);}
+  .mcol ul{list-style:none;}
+  .mcol li{font-family:'Caveat',cursive;font-size:19.5px;line-height:1.3;color:var(--ink);text-align:center;padding:6px 0;}
+  .mcol li em{display:block;font-size:14.5px;color:var(--faded);}
+  /* gallery */
+  .gal-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  .gal-grid img{width:100%;height:280px;object-fit:cover;border-radius:14px;border:1px solid var(--stone);display:block;transition:.25s;}
+  .gal-grid img:nth-child(5){grid-column:1/-1;height:320px;}
+  @media(min-width:900px){ .gal-grid{grid-template-columns:repeat(5,1fr);} .gal-grid img{height:250px;} .gal-grid img:nth-child(5){grid-column:auto;height:250px;} }
+  .gal-grid img:hover{transform:scale(1.015);box-shadow:0 14px 34px rgba(74,86,56,.18);}
+  .gal-note{text-align:center;margin-top:26px;font-family:'Caveat',cursive;font-size:21px;color:var(--olive-deep);}
+  .portrait .pt-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+  /* closing cta */
+  .closing{background:var(--cream-deep);border-top:1px solid var(--stone);text-align:center;padding:80px 24px;}
+  .closing h2{font-family:'Playfair Display';font-weight:800;font-size:clamp(30px,4.6vw,44px);color:var(--charcoal);margin-bottom:12px;}
+  .closing p{color:#6a6654;font-size:16px;max-width:520px;margin:0 auto 28px;}
   /* ---------- sections ---------- */
   section{padding:84px 0;}
   .sec-head{text-align:center;max-width:640px;margin:0 auto 52px;padding:0 24px;}
@@ -187,6 +231,12 @@
   <div class="area">Serving the Roaring Fork Valley</div>
 </header>
 
+<!-- statement -->
+<div class="statement">
+  <p class="st-big rv">The best nights aren’t cooked in restaurants. <em>They’re cooked in your kitchen.</em></p>
+  <p class="st-scope rv">dvtChef works two ways: <b>private chef dinners</b>, cooked and served in your home for intimate tables, and <b>full-service catering</b> for events and celebrations. Based in the Roaring Fork Valley — Aspen through Glenwood Springs, anywhere between, and happy to travel for the right table.</p>
+</div>
+
 <!-- services -->
 <section id="services">
   <div class="sec-head rv">
@@ -239,6 +289,20 @@
   </div>
 </div>
 
+<!-- approach -->
+<section class="approach">
+  <div class="sec-head rv">
+    <span class="kicker">Our approach</span>
+    <h2>Not a side gig. The whole job.</h2>
+  </div>
+  <div class="ap-in">
+    <p class="rv">Every menu is written from scratch, for one table, once. The menu for your night doesn’t exist until Drew hears about your night — no banquet templates, no steam-table fare, nothing reheated. (Unless you order the drop-off. Then: gloriously reheatable, on purpose.)</p>
+    <p class="rv">He shops it, preps it, cooks it in your kitchen or on site, serves it, and leaves the place cleaner than he found it. For bigger events that means full setup and breakdown, coursing that lands on time, and a plan for every what-if — <b>proactive, not reactive</b>.</p>
+    <p class="rv">And the kitchen becomes part of the party. Guests drift in, the pans get loud, something hits the fire — the cooking is the show, and dinner shows up hot. Catering isn’t a thing dvtChef does on the side; it’s the whole job, and your event gets the attention a restaurant can’t give it.</p>
+    <p class="ap-note rv">“Mise en place for the whole evening — not just the food.”</p>
+  </div>
+</section>
+
 <!-- how it works -->
 <section class="how">
   <div class="sec-head rv">
@@ -260,48 +324,118 @@
     <p>No two menus are the same — these are just to make you hungry.</p>
   </div>
   <div class="wrap">
-    <div class="menu-grid">
-      <div class="menu-card rv">
-        <div class="mk">Private dinner · for two</div>
-        <h3>The Date Night</h3>
-        <div class="for">five courses, both plates hot at once</div>
-        <div class="rule"></div>
-        <ul>
-          <li>seared scallops, brown butter & lemon</li>
-          <li>little gem salad, shaved parm</li>
-          <li>ribeye au poivre <em>garlic-whipped potatoes</em></li>
-          <li>blistered green beans</li>
-          <li>chocolate pots de crème</li>
-        </ul>
-      </div>
-      <div class="menu-card rv">
-        <div class="mk">Dinner party · family style</div>
-        <h3>The Gathering</h3>
-        <div class="for">generous, familiar, nothing to explain</div>
-        <div class="rule"></div>
-        <ul>
-          <li>whipped ricotta, hot honey & herbed focaccia</li>
-          <li>braised short ribs <em>over creamy polenta</em></li>
-          <li>charred broccolini, chili & garlic</li>
-          <li>big green salad for the table</li>
-          <li>olive oil cake, whipped cream</li>
-        </ul>
-      </div>
-      <div class="menu-card rv">
-        <div class="mk">Drop-off · ready to serve</div>
-        <h3>The Après Board</h3>
-        <div class="for">for when everyone comes off the mountain</div>
-        <div class="rule"></div>
-        <ul>
-          <li>roasted garlic whipped ricotta</li>
-          <li>prosciutto, salami & mountain cheeses</li>
-          <li>marinated olives & peppers</li>
-          <li>warm herbed focaccia</li>
-          <li>brown butter chocolate chip cookies</li>
-        </ul>
+    <div class="mtabs rv">
+      <button class="mtab on" data-m="plated">Plated Dinners</button>
+      <button class="mtab" data-m="family">Buffet & Family Style</button>
+      <button class="mtab" data-m="boards">Canapés & Boards</button>
+    </div>
+
+    <div class="mpanel on" id="m-plated">
+      <div class="menu-wide rv">
+        <div class="mw-head"><div class="mk">Seated · coursed · both plates hot at once</div><h3>Plated Dinners</h3><div class="for">date nights, anniversaries, small dinner parties</div></div>
+        <div class="mcols">
+          <div class="mcol">
+            <div class="mcat">First</div>
+            <ul>
+              <li>butternut soup, brown butter & sage</li>
+              <li>little gem salad, shaved parm</li>
+              <li>roasted beets & chèvre, candied walnuts</li>
+            </ul>
+            <div class="mcat">Dessert</div>
+            <ul>
+              <li>chocolate pots de crème</li>
+              <li>olive oil cake, whipped cream</li>
+            </ul>
+          </div>
+          <div class="mcol">
+            <div class="mcat">Mains</div>
+            <ul>
+              <li>ribeye au poivre <em>garlic-whipped potatoes</em></li>
+              <li>pan-roasted mountain trout <em>lemon & herbs</em></li>
+              <li>braised short rib <em>over creamy polenta</em></li>
+              <li>mushroom ragù pappardelle</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="menus-note rv">— tell Drew the occasion, he’ll write yours —</div>
+
+    <div class="mpanel" id="m-family">
+      <div class="menu-wide rv">
+        <div class="mw-head"><div class="mk">Generous · familiar · passed around the table</div><h3>Buffet & Family Style</h3><div class="for">gatherings, rehearsal dinners, the whole crew</div></div>
+        <div class="mcols">
+          <div class="mcol">
+            <div class="mcat">To start</div>
+            <ul>
+              <li>whipped ricotta, hot honey & focaccia</li>
+              <li>big green salad for the table</li>
+            </ul>
+            <div class="mcat">Dessert</div>
+            <ul>
+              <li>brown butter chocolate chip cookies</li>
+              <li>seasonal fruit crisp</li>
+            </ul>
+          </div>
+          <div class="mcol">
+            <div class="mcat">Mains & sides</div>
+            <ul>
+              <li>herb-roasted chicken</li>
+              <li>braised short ribs <em>over creamy polenta</em></li>
+              <li>charred broccolini, chili & garlic</li>
+              <li>roasted brussels & sweet potato</li>
+              <li>garlic-whipped potatoes</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mpanel" id="m-boards">
+      <div class="menu-wide rv">
+        <div class="mw-head"><div class="mk">Passed bites · boards · ready to serve</div><h3>Canapés & Boards</h3><div class="for">cocktail hours, après-ski, drop-off spreads</div></div>
+        <div class="mcols">
+          <div class="mcol">
+            <div class="mcat">Passed</div>
+            <ul>
+              <li>crostini, avocado crème & golden beet relish</li>
+              <li>citrus-cured salmon, crème fraîche & toast</li>
+              <li>prosciutto-wrapped dates</li>
+              <li>street tacos, microgreens & fresno chile</li>
+            </ul>
+          </div>
+          <div class="mcol">
+            <div class="mcat">Boards</div>
+            <ul>
+              <li>mountain cheese & charcuterie</li>
+              <li>roasted vegetables & fondue for dipping</li>
+              <li>marinated olives & peppers</li>
+              <li>warm herbed focaccia</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="menus-note rv">— these are to make you hungry; yours gets written from scratch —</div>
+  </div>
+</section>
+
+<!-- gallery -->
+<section id="gallery" style="padding-top:0">
+  <div class="sec-head rv">
+    <span class="kicker">From the kitchen</span>
+    <h2>Recent plates</h2>
+    <p>Real food from real bookings — no stock photos, no stylists.</p>
+  </div>
+  <div class="wrap">
+    <div class="gal-grid rv">
+      <img src="assets/photos/tacos-street.jpg" alt="Street tacos with microgreens and fresno chile">
+      <img src="assets/photos/crostini.jpg" alt="Crostini with avocado crème and golden beet relish">
+      <img src="assets/photos/salmon.jpg" alt="Citrus-cured salmon with crème fraîche and toast">
+      <img src="assets/photos/platter.jpg" alt="Roasted vegetable platter with fondue, outdoors">
+      <img src="assets/photos/tacos-board.jpg" alt="Taco trio on a live-edge board">
+    </div>
+    <div class="gal-note rv">— shot on a phone, cooked for real people —</div>
   </div>
 </section>
 
@@ -309,8 +443,7 @@
 <section class="about" id="about">
   <div class="about-in">
     <div class="portrait rv">
-      <img class="etch" src="assets/skillet.png" alt="">
-      <div class="ph">Chef Drew — photo coming soon</div>
+      <img class="pt-img" src="assets/photos/chef-drew.jpg" alt="Chef Drew at his kitchen counter">
     </div>
     <div class="about-txt rv">
       <span class="kicker">The chef</span>
@@ -384,6 +517,13 @@
   </div>
 </section>
 
+<!-- closing cta -->
+<div class="closing">
+  <h2 class="rv">Ready to get the night started?</h2>
+  <p class="rv">Tell Drew the occasion — he’ll bring the menu, the groceries, and the calm.</p>
+  <a class="btn rv" href="#book" style="font-size:13px;padding:16px 34px;">Check your date</a>
+</div>
+
 <footer>
   <div class="values">
     <div class="values-in">
@@ -427,6 +567,14 @@ Email: ${v('f-email')}
 ${v('f-msg')}
 `);
     window.location.href = `mailto:${BOOKING_EMAIL}?subject=${subject}&body=${body}`;
+  });
+
+  /* menu tabs */
+  document.querySelectorAll('.mtab').forEach(b=>{
+    b.addEventListener('click',()=>{
+      document.querySelectorAll('.mtab').forEach(x=>x.classList.toggle('on', x===b));
+      document.querySelectorAll('.mpanel').forEach(p=>p.classList.toggle('on', p.id==='m-'+b.dataset.m));
+    });
   });
 
   /* scroll reveal */
