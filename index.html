@@ -24,9 +24,7 @@
   .kicker{font-family:'Montserrat';font-weight:700;font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--olive-soft);}
   .etch{mix-blend-mode:multiply;filter:brightness(1.07) contrast(1.05);}
 
-  /* reveal */
-  .rv{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease;}
-  .rv.in{opacity:1;transform:none;}
+  /* reveal animation removed — content shows immediately */
 
   /* ---------- nav ---------- */
   nav{position:sticky;top:0;z-index:50;background:rgba(242,239,232,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--stone);}
@@ -65,8 +63,8 @@
   .band{background:var(--olive);color:var(--cream);position:relative;overflow:hidden;}
   .band .in{max-width:860px;margin:0 auto;padding:68px 24px;text-align:center;position:relative;}
   .band .garlic-bg{position:absolute;right:-30px;top:-34px;width:230px;height:230px;opacity:.14;transform:rotate(10deg);filter:invert(1) brightness(2);mix-blend-mode:screen;pointer-events:none;}
-  .band .q{font-family:'Playfair Display';font-weight:600;font-style:italic;font-size:clamp(23px,3.6vw,33px);line-height:1.35;}
-  .band .q b{font-style:normal;font-weight:800;}
+  .band .q{font-family:'Playfair Display';font-weight:600;font-size:clamp(23px,3.6vw,33px);line-height:1.35;}
+  .band .q b{font-weight:800;}
   .band .who{margin-top:18px;font-family:'Montserrat';font-weight:700;font-size:10px;letter-spacing:.26em;color:var(--stone);text-transform:uppercase;}
 
   /* statement */
@@ -233,7 +231,7 @@
 
 <!-- statement -->
 <div class="statement">
-  <p class="st-big rv">The best nights aren’t cooked in restaurants. <em>They’re cooked in your kitchen.</em></p>
+  <p class="st-big rv">The best nights aren’t cooked in restaurants. They’re cooked in your kitchen.</p>
   <p class="st-scope rv">dvtChef works two ways: <b>private chef dinners</b>, cooked and served in your home for intimate tables, and <b>full-service catering</b> for events and celebrations. Based in the Roaring Fork Valley — Aspen through Glenwood Springs, anywhere between, and happy to travel for the right table.</p>
 </div>
 
@@ -247,19 +245,19 @@
   <div class="wrap">
     <div class="svc-grid">
       <div class="svc rv">
-        <div class="ic"><img class="etch" src="assets/skillet.png" alt=""></div>
+        <div class="ic"><img class="etch" loading="lazy" decoding="async" src="assets/skillet.png" alt=""></div>
         <h3>Private Chef Dinners</h3>
         <p>Date nights, birthdays, powder-day dinner parties. Drew shops, cooks in your kitchen, serves each course, and leaves the place cleaner than he found it.</p>
         <div class="tagln">You sit. He cooks.</div>
       </div>
       <div class="svc rv">
-        <div class="ic"><img class="etch" src="assets/rosemary.png" alt=""></div>
+        <div class="ic"><img class="etch" loading="lazy" decoding="async" src="assets/rosemary.png" alt=""></div>
         <h3>Event Catering</h3>
         <p>Full-service menus for rehearsal dinners, retreats, and mountain celebrations — plated or family-style, scaled from ten guests to the whole party.</p>
         <div class="tagln">Big night? Covered.</div>
       </div>
       <div class="svc rv">
-        <div class="ic"><img class="etch" src="assets/garlic.png" alt=""></div>
+        <div class="ic"><img class="etch" loading="lazy" decoding="async" src="assets/garlic.png" alt=""></div>
         <h3>Drop-off Catering</h3>
         <p>Boards, trays, and family-style spreads delivered ready to serve. No staff in your space, nothing to cook — just lift the lid.</p>
         <div class="tagln">Zero stress, all flavor.</div>
@@ -282,7 +280,7 @@
 
 <!-- pull quote band -->
 <div class="band">
-  <img class="garlic-bg" src="assets/garlic.png" alt="">
+  <img class="garlic-bg" loading="lazy" decoding="async" src="assets/garlic.png" alt="">
   <div class="in rv">
     <div class="q">The difference between <b>“it’s fine”</b> and <b>“can you make this again?”</b></div>
     <div class="who">— every table Chef Drew cooks for</div>
@@ -429,11 +427,11 @@
   </div>
   <div class="wrap">
     <div class="gal-grid rv">
-      <img src="assets/photos/tacos-street.jpg" alt="Street tacos with microgreens and fresno chile">
-      <img src="assets/photos/crostini.jpg" alt="Crostini with avocado crème and golden beet relish">
-      <img src="assets/photos/salmon.jpg" alt="Citrus-cured salmon with crème fraîche and toast">
-      <img src="assets/photos/platter.jpg" alt="Roasted vegetable platter with fondue, outdoors">
-      <img src="assets/photos/tacos-board.jpg" alt="Taco trio on a live-edge board">
+      <img loading="lazy" decoding="async" src="assets/photos/tacos-street.jpg" alt="Street tacos with microgreens and fresno chile">
+      <img loading="lazy" decoding="async" src="assets/photos/crostini.jpg" alt="Crostini with avocado crème and golden beet relish">
+      <img loading="lazy" decoding="async" src="assets/photos/salmon.jpg" alt="Citrus-cured salmon with crème fraîche and toast">
+      <img loading="lazy" decoding="async" src="assets/photos/platter.jpg" alt="Roasted vegetable platter with fondue, outdoors">
+      <img loading="lazy" decoding="async" src="assets/photos/tacos-board.jpg" alt="Taco trio on a live-edge board">
     </div>
     <div class="gal-note rv">— shot on a phone, cooked for real people —</div>
   </div>
@@ -443,7 +441,7 @@
 <section class="about" id="about">
   <div class="about-in">
     <div class="portrait rv">
-      <img class="pt-img" src="assets/photos/chef-drew.jpg" alt="Chef Drew at his kitchen counter">
+      <img class="pt-img" loading="lazy" decoding="async" src="assets/photos/chef-drew.jpg" alt="Chef Drew at his kitchen counter">
     </div>
     <div class="about-txt rv">
       <span class="kicker">The chef</span>
@@ -577,9 +575,7 @@ ${v('f-msg')}
     });
   });
 
-  /* scroll reveal */
-  const io = new IntersectionObserver(es=>es.forEach(en=>{ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target);} }),{threshold:.12});
-  document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+
 </script>
 </body>
 </html>
