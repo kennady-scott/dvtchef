@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>dvtChef — Private Chef & Catering · Roaring Fork Valley</title>
-<meta name="description" content="Private chef dinners, event catering, drop-off catering, and weekly meal prep across the Roaring Fork Valley — Aspen to Glenwood Springs. Cooking. Handled.">
+<meta name="description" content="Private chef dinners and full-service event catering across the Roaring Fork Valley — Aspen to Glenwood Springs. Cooking. Handled.">
 <link rel="icon" type="image/png" href="assets/app-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -108,8 +108,13 @@
   /* gallery */
   .gal-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
   .gal-grid img{width:100%;height:280px;object-fit:cover;border-radius:14px;border:1px solid var(--stone);display:block;transition:.25s;}
-  .gal-grid img:nth-child(5){grid-column:1/-1;height:320px;}
-  @media(min-width:900px){ .gal-grid{grid-template-columns:repeat(5,1fr);} .gal-grid img{height:250px;} .gal-grid img:nth-child(5){grid-column:auto;height:250px;} }
+  @media(min-width:900px){ .gal-grid{grid-template-columns:repeat(3,1fr);} .gal-grid img{height:260px;} }
+  .fire-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+  @media(max-width:720px){ .fire-grid{grid-template-columns:1fr;} }
+  .fire-card{background:var(--olive);border-radius:20px;padding:30px 28px;color:var(--cream);}
+  .fire-card h3{font-family:'Playfair Display';font-weight:800;font-size:23px;margin-bottom:10px;}
+  .fire-card p{font-size:14.5px;color:#e3e2d4;line-height:1.65;}
+  .fire-card .tagln{margin-top:14px;font-family:'Caveat',cursive;font-size:19px;color:var(--stone);}
   .gal-grid img:hover{transform:scale(1.015);box-shadow:0 14px 34px rgba(74,86,56,.18);}
   .gal-note{text-align:center;margin-top:26px;font-family:'Caveat',cursive;font-size:21px;color:var(--olive-deep);}
   .portrait .pt-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
@@ -224,10 +229,10 @@
     <div>
       <div class="h-lock">
         <img class="etch" src="assets/garlic.png" alt="">
-        <div><div class="wm-s">dvtChef</div><div class="tl-s">Cook with confidence · Est. 2026</div></div>
+        <div><div class="wm-s">dvtChef</div><div class="tl-s">Cook with confidence · Est. 2019</div></div>
       </div>
       <h1>Cooking. Handled.</h1>
-      <p class="sub">Private chef dinners, full-service catering, and weekly meals, cooked by <strong>Chef Drew</strong> in your kitchen — from Aspen to Glenwood Springs.</p>
+      <p class="sub">Private chef dinners and full-service event catering, cooked by <strong>Chef Drew</strong> — from Aspen to Glenwood Springs.</p>
       <div class="ctas">
         <a class="btn" href="#book">Check your date</a>
         <a class="btn ghost" href="#menus">See sample menus</a>
@@ -235,8 +240,8 @@
       <div class="area">Serving the Roaring Fork Valley</div>
     </div>
     <div class="hero-ph">
-      <img class="ph-main" src="assets/photos/tacos-street.jpg" alt="Street tacos with microgreens and fresno chile, by Chef Drew">
-      <div class="ph-badge">street tacos — microgreens, fresno chile</div>
+      <img class="ph-main" src="assets/photos/crostini.jpg" alt="Crostini with avocado crème and golden beets, by Chef Drew">
+      <div class="ph-badge">crostini — avocado crème, golden beets</div>
     </div>
   </div>
 </header>
@@ -253,7 +258,7 @@
 <section id="services">
   <div class="sec-head rv">
     <span class="kicker">What we do</span>
-    <h2>Four ways to a great table</h2>
+    <h2>Two ways to a great table</h2>
     <p>Every booking starts with a conversation and ends with everyone asking who cooked.</p>
   </div>
   <div class="wrap">
@@ -267,28 +272,35 @@
         </div>
       </div>
       <div class="svc rv">
-        <img class="svc-ph" loading="lazy" decoding="async" src="assets/photos/tacos-board.jpg" alt="Taco trio served on a live-edge board">
+        <img class="svc-ph" loading="lazy" decoding="async" src="assets/photos/platter.jpg" alt="Roasted vegetable platter with fondue, served outdoors">
         <div class="svc-body">
         <h3>Event Catering</h3>
         <p>Full-service menus for rehearsal dinners, retreats, and mountain celebrations — plated or family-style, scaled from ten guests to the whole party.</p>
         <div class="tagln">Big night? Covered.</div>
         </div>
       </div>
-      <div class="svc rv">
-        <img class="svc-ph" loading="lazy" decoding="async" src="assets/photos/platter.jpg" alt="Roasted vegetable platter with fondue">
-        <div class="svc-body">
-        <h3>Drop-off Catering</h3>
-        <p>Boards, trays, and family-style spreads delivered ready to serve. No staff in your space, nothing to cook — just lift the lid.</p>
-        <div class="tagln">Zero stress, all flavor.</div>
-        </div>
       </div>
-      <div class="svc rv">
-        <img class="svc-ph" loading="lazy" decoding="async" src="assets/photos/biscuits.jpg" alt="Fresh-baked biscuits on a cutting board">
-        <div class="svc-body">
-        <h3>Weekly Meal Prep</h3>
-        <p>A week of dinners in your fridge, cooked custom to your family — your tastes, your goals, your picky eaters. Heat, plate, done.</p>
-        <div class="tagln">Weeknights, handled.</div>
-        </div>
+  </div>
+</section>
+
+<!-- live fire (group catering) -->
+<section class="fire" style="padding-top:0">
+  <div class="sec-head">
+    <span class="kicker">Group catering · live fire</span>
+    <h2>Cooked over real fire</h2>
+    <p>For events, Drew brings the fire with him — two setups guests end up gathering around.</p>
+  </div>
+  <div class="wrap">
+    <div class="fire-grid">
+      <div class="fire-card">
+        <h3>The Pizza Oven</h3>
+        <p>Ask about pizza parties — Drew brings the oven to your event and fires pizzas on site, from a classic cheese or pepperoni to smoked salmon and caviar, and every combination in between.</p>
+        <div class="tagln">everyone gets one straight from the oven</div>
+      </div>
+      <div class="fire-card">
+        <h3>Japanese Charcoal</h3>
+        <p>Clean, intense heat for skewers, meats, and vegetables — subtle smoke, serious crust. The kind of grilling people stand around with a drink in hand.</p>
+        <div class="tagln">the grill becomes the gathering spot</div>
       </div>
     </div>
   </div>
@@ -298,8 +310,8 @@
 <div class="band">
   <img class="garlic-bg" loading="lazy" decoding="async" src="assets/garlic.png" alt="">
   <div class="in rv">
-    <div class="q">The difference between <b>“it’s fine”</b> and <b>“can you make this again?”</b></div>
-    <div class="who">— every table Chef Drew cooks for</div>
+    <div class="q">“You learn a lot about someone when you share a meal together.”</div>
+    <div class="who">— Anthony Bourdain</div>
   </div>
 </div>
 
@@ -310,10 +322,10 @@
     <h2>Not a side gig. The whole job.</h2>
   </div>
   <div class="ap-in">
-    <p class="rv">Every menu is written from scratch, for one table, once. The menu for your night doesn’t exist until Drew hears about your night — no banquet templates, no steam-table fare, nothing reheated. (Unless you order the drop-off. Then: gloriously reheatable, on purpose.)</p>
-    <p class="rv">He shops it, preps it, cooks it in your kitchen or on site, serves it, and leaves the place cleaner than he found it. For bigger events that means full setup and breakdown, coursing that lands on time, and a plan for every what-if — <b>proactive, not reactive</b>.</p>
-    <p class="rv">And the kitchen becomes part of the party. Guests drift in, the pans get loud, something hits the fire — the cooking is the show, and dinner shows up hot. Catering isn’t a thing dvtChef does on the side; it’s the whole job, and your event gets the attention a restaurant can’t give it.</p>
-    <p class="ap-note rv">“Mise en place for the whole evening — not just the food.”</p>
+    <p>The joy of gathering friends and family in your home — or your vacation home — and entertaining them with outstanding food and incredible libations is a gift. Maybe you were skiing all day, or shopping, or doing absolutely nothing. The moment the first guest arrives and everyone begins to indulge, you’re in for a treat.</p>
+    <p>The evening is going to be a success, and your only job is to enjoy it. The moment. The conversation. The company. The food.</p>
+    <p>Everything else is handled: a menu written from scratch for your table, the shopping, the cooking, the serving — and a kitchen left cleaner than it was found.</p>
+    <p class="ap-note">“We are handling everything else.”</p>
   </div>
 </section>
 
@@ -333,104 +345,55 @@
 <!-- menus -->
 <section id="menus">
   <div class="sec-head rv">
-    <span class="kicker">Sample menus</span>
+    <span class="kicker">The menu</span>
     <h2>Written fresh for every table</h2>
-    <p>No two menus are the same — these are just to make you hungry.</p>
+    <p>A recent dinner-party menu. Yours will be its own — written for your table and the season.</p>
   </div>
   <div class="wrap">
-    <div class="mtabs rv">
-      <button class="mtab on" data-m="plated">Plated Dinners</button>
-      <button class="mtab" data-m="family">Buffet & Family Style</button>
-      <button class="mtab" data-m="boards">Canapés & Boards</button>
-    </div>
-
-    <div class="mpanel on" id="m-plated">
-      <div class="menu-wide rv">
-        <div class="mw-head"><div class="mk">Seated · coursed · both plates hot at once</div><h3>Plated Dinners</h3><div class="for">date nights, anniversaries, small dinner parties</div></div>
-        <div class="mcols">
-          <div class="mcol">
-            <div class="mcat">First</div>
-            <ul>
-              <li>butternut soup, brown butter & sage</li>
-              <li>little gem salad, shaved parm</li>
-              <li>roasted beets & chèvre, candied walnuts</li>
-            </ul>
-            <div class="mcat">Dessert</div>
-            <ul>
-              <li>chocolate pots de crème</li>
-              <li>olive oil cake, whipped cream</li>
-            </ul>
-          </div>
-          <div class="mcol">
-            <div class="mcat">Mains</div>
-            <ul>
-              <li>ribeye au poivre <em>garlic-whipped potatoes</em></li>
-              <li>pan-roasted mountain trout <em>lemon & herbs</em></li>
-              <li>braised short rib <em>over creamy polenta</em></li>
-              <li>mushroom ragù pappardelle</li>
-            </ul>
-          </div>
+    <div class="menu-wide">
+      <div class="mw-head"><div class="mk">Dinner parties · guests choose per course</div><h3>The Menu</h3><div class="for">from a recent dinner party — every event’s menu is written fresh</div></div>
+      <div class="mcols">
+        <div class="mcol">
+          <div class="mcat">Snacks · choose one</div>
+          <ul>
+            <li>buttermilk sea-salt biscuit <em>prosciutto, pepper jelly</em></li>
+            <li>smoked trout mousse <em>crostini, pickled red onions</em></li>
+            <li>chicken liver mousse <em>gingered pear, toasted baguette</em></li>
+            <li>deviled eggs <em>bluefin tuna, chive</em></li>
+            <li>mini crab cake <em>basil aioli</em></li>
+            <li>miso French onion dip <em>potato chips, carrots</em></li>
+            <li>baked feta <em>roasted cherry tomato & crostini</em></li>
+          </ul>
+          <div class="mcat">Small plates & salads · choose one</div>
+          <ul>
+            <li>beet salad <em>goat cheese, arugula, pistachios, orange-cumin vinaigrette</em></li>
+            <li>bibb salad <em>candied pecans, Buttermilk Blue, arugula, bacon</em></li>
+            <li>arugula salad <em>feta, green olives, carrot & asparagus ribbons, dill-pickle vin</em></li>
+            <li>steamed mussels <em>roasted garlic, oven-dried tomato, cilantro</em></li>
+            <li>tuna tartare <em>avocado mousse, crostini, chive</em></li>
+            <li>Anson Mills cornbread <em>whipped thyme-honey butter</em></li>
+          </ul>
+        </div>
+        <div class="mcol">
+          <div class="mcat">Larger plates</div>
+          <ul>
+            <li>salmon <em>asparagus, handmade gnocchi, sauce choron, chives</em></li>
+            <li>NY strip <em>mashed Yukon golds, roasted garlic, spinach, salsa verde, red wine</em></li>
+            <li>soy-marinated black cod <em>crab fried rice, bonito aioli, smoked cashew-tomato salsa</em></li>
+            <li>swordfish milanese <em>stone-ground grits, burnt lime–caper beurre blanc, roasted cherry tomatoes, basil</em></li>
+            <li>halibut <em>sweet potatoes, asparagus, porcini aioli, cilantro chimichurri</em></li>
+          </ul>
+          <div class="mcat">Dessert</div>
+          <ul>
+            <li>butterscotch budino <em>whipped cream, fruit, crumbled cookie</em></li>
+            <li>apple crumble <em>vanilla ice cream, cinnamon</em></li>
+            <li>banana pudding <em>Nilla wafers, peanut-butter whipped cream</em></li>
+            <li>pumpkin & date tart <em>cinnamon ice cream, berries</em></li>
+          </ul>
         </div>
       </div>
     </div>
 
-    <div class="mpanel" id="m-family">
-      <div class="menu-wide rv">
-        <div class="mw-head"><div class="mk">Generous · familiar · passed around the table</div><h3>Buffet & Family Style</h3><div class="for">gatherings, rehearsal dinners, the whole crew</div></div>
-        <div class="mcols">
-          <div class="mcol">
-            <div class="mcat">To start</div>
-            <ul>
-              <li>whipped ricotta, hot honey & focaccia</li>
-              <li>big green salad for the table</li>
-            </ul>
-            <div class="mcat">Dessert</div>
-            <ul>
-              <li>brown butter chocolate chip cookies</li>
-              <li>seasonal fruit crisp</li>
-            </ul>
-          </div>
-          <div class="mcol">
-            <div class="mcat">Mains & sides</div>
-            <ul>
-              <li>herb-roasted chicken</li>
-              <li>braised short ribs <em>over creamy polenta</em></li>
-              <li>charred broccolini, chili & garlic</li>
-              <li>roasted brussels & sweet potato</li>
-              <li>garlic-whipped potatoes</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="mpanel" id="m-boards">
-      <div class="menu-wide rv">
-        <div class="mw-head"><div class="mk">Passed bites · boards · ready to serve</div><h3>Canapés & Boards</h3><div class="for">cocktail hours, après-ski, drop-off spreads</div></div>
-        <div class="mcols">
-          <div class="mcol">
-            <div class="mcat">Passed</div>
-            <ul>
-              <li>crostini, avocado crème & golden beet relish</li>
-              <li>citrus-cured salmon, crème fraîche & toast</li>
-              <li>prosciutto-wrapped dates</li>
-              <li>street tacos, microgreens & fresno chile</li>
-            </ul>
-          </div>
-          <div class="mcol">
-            <div class="mcat">Boards</div>
-            <ul>
-              <li>mountain cheese & charcuterie</li>
-              <li>roasted vegetables & fondue for dipping</li>
-              <li>marinated olives & peppers</li>
-              <li>warm herbed focaccia</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="menus-note rv">— these are to make you hungry; yours gets written from scratch —</div>
   </div>
 </section>
 
@@ -448,6 +411,7 @@
       <img loading="lazy" decoding="async" src="assets/photos/salmon.jpg" alt="Citrus-cured salmon with crème fraîche and toast">
       <img loading="lazy" decoding="async" src="assets/photos/platter.jpg" alt="Roasted vegetable platter with fondue, outdoors">
       <img loading="lazy" decoding="async" src="assets/photos/tacos-board.jpg" alt="Taco trio on a live-edge board">
+      <img loading="lazy" decoding="async" src="assets/photos/biscuits.jpg" alt="Fresh-baked biscuits with whipped butter">
     </div>
   </div>
 </section>
@@ -461,9 +425,9 @@
     <div class="about-txt rv">
       <span class="kicker">The chef</span>
       <h2>Meet Chef Drew</h2>
-      <p>Drew is a professionally trained chef who would rather cook for your table than for a dining room of strangers. The menus are built around real conversations — what you love, what the kids will actually eat, what the night is supposed to feel like.</p>
-      <p>Based in the Roaring Fork Valley, he cooks in home kitchens from Aspen to Glenwood Springs — intimate dinners, big family gatherings, and the kind of week-of-meals that makes a busy house run.</p>
-      <div class="note">“Good food brings people together. My job is to make the night easy — great cooking shouldn’t cost you the evening with your guests.”</div>
+      <p>Chef Drew Scott has spent most of his culinary career in the Roaring Fork Valley. He started at Syzygy in 2000 under the strict guidance of Austrian chef Martin Oswald, learning the principles of fine cuisine — then went out on stages across California: Wolfgang Puck’s Postrio in San Francisco, Madrona Manor under chef Jesse Malgren, and The French Laundry.</p>
+      <p>Back home, he helped open a casual spot in Basalt, served as executive chef at Elevation until 2010, then spent nearly a decade as owner-operator of the Downvalley Tavern in El Jebel. Since 2019 he has cooked the way he likes best — for private clients, at their tables, as dvtChef.</p>
+      <div class="note">“My true passion has always been hospitality — to nourish and feed the body and soul, and to leave my guests with an overwhelming feeling of contentment.”</div>
     </div>
   </div>
 </section>
@@ -485,8 +449,6 @@
             <option>Dinner party</option>
             <option>Family gathering</option>
             <option>Wedding / big event</option>
-            <option>Drop-off catering</option>
-            <option>Weekly meal prep</option>
             <option>Something else</option>
           </select>
         </div>
@@ -548,7 +510,7 @@
   </div>
   <div class="foot-in">
     <div class="fw">dvtChef</div>
-    <div class="ftl">— Cook with confidence · EST. 2026 —</div>
+    <div class="ftl">— Cook with confidence · EST. 2019 —</div>
     <div class="towns">Aspen · Snowmass · Basalt · Carbondale · Glenwood Springs</div>
     <div class="foot-links">
       <a href="#book">Book a date</a>
@@ -581,13 +543,6 @@ ${v('f-msg')}
     window.location.href = `mailto:${BOOKING_EMAIL}?subject=${subject}&body=${body}`;
   });
 
-  /* menu tabs */
-  document.querySelectorAll('.mtab').forEach(b=>{
-    b.addEventListener('click',()=>{
-      document.querySelectorAll('.mtab').forEach(x=>x.classList.toggle('on', x===b));
-      document.querySelectorAll('.mpanel').forEach(p=>p.classList.toggle('on', p.id==='m-'+b.dataset.m));
-    });
-  });
 
 
 </script>
